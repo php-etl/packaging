@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Kiboko\Component\Packaging;
 
-use Kiboko\Component\Satellite;
+use Kiboko\Contract\Packaging\DirectoryInterface;
 
-final class Directory implements Satellite\Filesystem\DirectoryInterface
+final class Directory implements DirectoryInterface
 {
     private string $path;
     private \RecursiveIterator $iterator;

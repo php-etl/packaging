@@ -2,7 +2,7 @@
 
 namespace Kiboko\Component\Packaging\Asset;
 
-use Kiboko\Component\Packaging\AssetInterface;
+use Kiboko\Contract\Packaging\AssetInterface;
 use PhpParser\Node;
 use PhpParser\PrettyPrinter;
 

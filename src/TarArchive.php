@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Kiboko\Component\Packaging;
 
-use Kiboko\Component\Packaging\AssetInterface;
-use Kiboko\Component\Packaging\DirectoryInterface;
-use Kiboko\Component\Packaging\FileInterface;
+use Kiboko\Contract\Packaging\AssetInterface;
+use Kiboko\Contract\Packaging\DirectoryInterface;
+use Kiboko\Contract\Packaging\FileInterface;
 
 final class TarArchive implements AssetInterface
 {

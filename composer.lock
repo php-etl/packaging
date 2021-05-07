@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b5fbdddbf13093b43973c86d472ea526",
+    "content-hash": "dfa599f0b4c64bc88c474181447d84af",
     "packages": [
         {
             "name": "nikic/php-parser",
@@ -61,6 +61,57 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.5"
             },
             "time": "2021-05-03T19:11:20+00:00"
+        },
+        {
+            "name": "php-etl/packaging-contracts",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-etl/packaging-contracts.git",
+                "reference": "dafc1dd7cffc004442e9072172e88eb430b78185"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-etl/packaging-contracts/zipball/dafc1dd7cffc004442e9072172e88eb430b78185",
+                "reference": "dafc1dd7cffc004442e9072172e88eb430b78185",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "^4.10",
+                "php": "^8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kiboko\\Contract\\Packaging\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kiboko SAS",
+                    "homepage": "http://kiboko.fr"
+                },
+                {
+                    "name": "Grégory Planchat",
+                    "email": "gregory@kiboko.fr"
+                }
+            ],
+            "description": "This library aims at providing contracts for building TAR archives, using PHP resources and streams",
+            "support": {
+                "issues": "https://github.com/php-etl/packaging-contracts/issues",
+                "source": "https://github.com/php-etl/packaging-contracts/tree/master"
+            },
+            "time": "2021-05-07T11:10:40+00:00"
         }
     ],
     "packages-dev": [

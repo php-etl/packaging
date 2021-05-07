@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Kiboko\Component\Packaging\Asset;
 
-use Kiboko\Component\Packaging\AssetInterface;
+use Kiboko\Contract\Packaging\AssetInterface;
 
 final class LocalFile implements AssetInterface
 {

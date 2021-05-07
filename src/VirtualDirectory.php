@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Kiboko\Component\Packaging;
 
+use Kiboko\Contract\Packaging\DirectoryInterface;
+use Kiboko\Contract\Packaging\FileInterface;
+
 final class VirtualDirectory implements DirectoryInterface
 {
     private string $path;

@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Kiboko\Component\Packaging;
 
+use Kiboko\Contract\Packaging\AssetInterface;
+use Kiboko\Contract\Packaging\FileInterface;
+
 final class File implements FileInterface
 {
     private string $path;
