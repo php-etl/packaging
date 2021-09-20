@@ -10,6 +10,7 @@ use Kiboko\Contract\Packaging\FileInterface;
 final class VirtualDirectory implements DirectoryInterface
 {
     private string $path;
+    /** @var \ArrayIterator<string, FileInterface|DirectoryInterface> */
     private \ArrayIterator $children;
 
     public function __construct()

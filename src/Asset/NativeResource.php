@@ -6,11 +6,12 @@ namespace Kiboko\Component\Packaging\Asset;
 
 use Kiboko\Contract\Packaging\AssetInterface;
 
-final class Resource implements AssetInterface
+final class NativeResource implements AssetInterface
 {
     /** @var resource */
     private $stream;
 
+    /** @param resource $resource */
     public function __construct($resource)
     {
         if (!is_resource($resource)) {

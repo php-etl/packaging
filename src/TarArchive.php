@@ -19,7 +19,11 @@ final class TarArchive implements AssetInterface
 
     public function __construct(FileInterface|DirectoryInterface ...$files)
     {
-        $this->stream = fopen('php://temp', 'rb+');
+        $resource = fopen('php://temp', 'rb+');
+        if ($resource === false) {
+            throw new \RuntimeException('Could not create a temporary storage for the TAR archive creation.');
+        }
+        $this->stream = $resource;
 
         foreach ($files as $file) {
             if ($file instanceof DirectoryInterface) {
@@ -53,7 +57,7 @@ final class TarArchive implements AssetInterface
         }
     }
 
-    private function writeHeader(string $path, int $size, int $type)
+    private function writeHeader(string $path, int $size, int $type): void
     {
         $pathPrefix = null;
         $filename = $path;

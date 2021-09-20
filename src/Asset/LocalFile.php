@@ -18,6 +18,11 @@ final class LocalFile implements AssetInterface
     /** @return resource */
     public function asResource()
     {
-        return fopen($this->path, 'rb');
+        $resource = fopen($this->path, 'rb');
+        if ($resource === false) {
+            throw new \RuntimeException(strtr('Could not open the file at path %path%.', ['%path%' => $this->path]));
+        }
+
+        return $resource;
     }
 }

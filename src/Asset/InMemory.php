@@ -13,7 +13,12 @@ final class InMemory implements AssetInterface
 
     public function __construct(string $content)
     {
-        $this->stream = fopen('php://temp', 'rb+');
+        $resource = fopen('php://temp', 'rb+');
+        if ($resource === false) {
+            throw new \RuntimeException('Could not store the in-memory data in a new temporary resource.');
+        }
+        $this->stream = $resource;
+
         fwrite($this->stream, $content);
         fseek($this->stream, 0, SEEK_SET);
     }
@@ -22,6 +27,9 @@ final class InMemory implements AssetInterface
     public function asResource()
     {
         $resource = fopen('php://temp', 'rb+');
+        if ($resource === false) {
+            throw new \RuntimeException('Could not store the in-memory data in a new temporary resource.');
+        }
         fseek($this->stream, 0, SEEK_SET);
         stream_copy_to_stream($this->stream, $resource);
         fseek($resource, 0, SEEK_SET);

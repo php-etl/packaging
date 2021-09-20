@@ -15,7 +15,10 @@ final class AST implements AssetInterface
     public function asResource()
     {
         $resource = fopen('php://temp', 'rb+');
-        file_put_contents($resource, (new PrettyPrinter\Standard())->prettyPrintFile($this->node));
+        if ($resource === false) {
+            throw new \RuntimeException('Could not store the produced code in a temporary resource.');
+        }
+        fwrite($resource, (new PrettyPrinter\Standard())->prettyPrintFile([$this->node]));
         fseek($resource, 0, SEEK_SET);
         return $resource;
     }
