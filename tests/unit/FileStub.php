@@ -2,7 +2,7 @@
 
 namespace unit\Kiboko\Component\Packaging;
 
-use Kiboko\Component\Packaging\FileInterface;
+use Kiboko\Contract\Packaging\FileInterface;
 
 final class FileStub implements FileInterface
 {
@@ -18,7 +18,8 @@ final class FileStub implements FileInterface
     public function asResource()
     {
         $resource = fopen('php://temp', 'rb+');
-        file_put_contents($resource, $this->content);
+        assert($resource !== false);
+        fwrite($resource, $this->content);
         fseek($resource, 0, SEEK_SET);
         return $resource;
     }

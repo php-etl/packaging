@@ -33,7 +33,7 @@ final class VirtualDirectory implements DirectoryInterface
         return $this;
     }
 
-    public function hasChildren()
+    public function hasChildren(): bool
     {
         return $this->current() instanceof DirectoryInterface;
     }
@@ -48,7 +48,7 @@ final class VirtualDirectory implements DirectoryInterface
         return $this->children->current();
     }
 
-    public function next()
+    public function next(): void
     {
         $this->children->next();
     }
@@ -63,7 +63,7 @@ final class VirtualDirectory implements DirectoryInterface
         return $this->children->valid();
     }
 
-    public function rewind()
+    public function rewind(): void
     {
         $this->children->rewind();
     }

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Kiboko\Component\Packaging;
 
 use Kiboko\Contract\Packaging\DirectoryInterface;
+use Kiboko\Contract\Packaging\FileInterface;
 
 final class Directory implements DirectoryInterface
 {
@@ -28,19 +29,19 @@ final class Directory implements DirectoryInterface
         return $this->path;
     }
 
-    public function hasChildren()
+    public function hasChildren(): bool
     {
         return $this->iterator->hasChildren();
     }
 
-    public function getChildren()
+    public function getChildren(): self
     {
         $child = clone $this;
         $child->iterator = $this->iterator->getChildren();
         return $child;
     }
 
-    public function current()
+    public function current(): FileInterface|DirectoryInterface
     {
         $current = $this->iterator->current();
         if ($current->isDir()) {
@@ -53,22 +54,22 @@ final class Directory implements DirectoryInterface
         );
     }
 
-    public function next()
+    public function next(): void
     {
         $this->iterator->next();
     }
 
-    public function key()
+    public function key(): string
     {
         return $this->iterator->key();
     }
 
-    public function valid()
+    public function valid(): bool
     {
         return $this->iterator->valid();
     }
 
-    public function rewind()
+    public function rewind(): void
     {
         $this->iterator->rewind();
     }
