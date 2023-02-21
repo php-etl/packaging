@@ -7,15 +7,10 @@ namespace Kiboko\Component\Packaging;
 use Kiboko\Contract\Packaging\AssetInterface;
 use Kiboko\Contract\Packaging\FileInterface;
 
-final class File implements FileInterface
+final readonly class File implements FileInterface
 {
-    private string $path;
-    private AssetInterface $content;
-
-    public function __construct(string $path, AssetInterface $content)
+    public function __construct(private string $path, private AssetInterface $content)
     {
-        $this->path = $path;
-        $this->content = $content;
     }
 
     public function getPath(): string

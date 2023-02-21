@@ -6,7 +6,7 @@ use Kiboko\Contract\Packaging\AssetInterface;
 use PhpParser\Node;
 use PhpParser\PrettyPrinter;
 
-final class AST implements AssetInterface
+final readonly class AST implements AssetInterface
 {
     public function __construct(private Node $node)
     {}

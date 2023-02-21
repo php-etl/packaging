@@ -6,13 +6,10 @@ namespace Kiboko\Component\Packaging\Asset;
 
 use Kiboko\Contract\Packaging\AssetInterface;
 
-final class LocalFile implements AssetInterface
+final readonly class LocalFile implements AssetInterface
 {
-    private string $path;
-
-    public function __construct(string $path)
+    public function __construct(private string $path)
     {
-        $this->path = $path;
     }
 
     /** @return resource */

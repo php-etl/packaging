@@ -7,15 +7,13 @@ namespace Kiboko\Component\Packaging;
 use Kiboko\Contract\Packaging\AssetInterface;
 use Kiboko\Contract\Packaging\FileInterface;
 
-final class VirtualFile implements FileInterface
+final readonly class VirtualFile implements FileInterface
 {
     private string $path;
-    private AssetInterface $content;
 
-    public function __construct(AssetInterface $content)
+    public function __construct(private AssetInterface $content)
     {
         $this->path = hash('sha512', random_bytes(64)).'.temp';
-        $this->content = $content;
     }
 
     public function getPath(): string

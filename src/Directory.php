@@ -9,18 +9,16 @@ use Kiboko\Contract\Packaging\FileInterface;
 
 final class Directory implements DirectoryInterface
 {
-    private string $path;
     private \RecursiveIterator $iterator;
 
-    public function __construct(string $sourcePath)
+    public function __construct(private readonly string $path)
     {
-        $this->path = $sourcePath;
         $this->iterator = new \RecursiveDirectoryIterator(
-            $sourcePath,
+            $path,
             \RecursiveDirectoryIterator::SKIP_DOTS
             | \RecursiveDirectoryIterator::FOLLOW_SYMLINKS
             | \RecursiveDirectoryIterator::CURRENT_AS_FILEINFO
-            | \RecursiveDirectoryIterator::KEY_AS_PATHNAME
+            | \RecursiveDirectoryIterator::KEY_AS_PATHNAME | \FilesystemIterator::SKIP_DOTS
         );
     }
 

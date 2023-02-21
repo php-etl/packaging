@@ -7,7 +7,7 @@ namespace Kiboko\Component\Packaging;
 use Kiboko\Contract\Packaging\DirectoryInterface;
 use Kiboko\Contract\Packaging\FileInterface;
 
-final class VirtualDirectory implements DirectoryInterface
+final readonly class VirtualDirectory implements DirectoryInterface
 {
     private string $path;
     /** @var \ArrayIterator<string, FileInterface|DirectoryInterface> */
