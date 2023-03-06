@@ -1,2 +1,3 @@
-/bin/
-/vendor/
+vendor/
+bin/
+.php-cs-fixer.cache

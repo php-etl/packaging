@@ -16,7 +16,7 @@ final readonly class LocalFile implements AssetInterface
     public function asResource()
     {
         $resource = fopen($this->path, 'rb');
-        if ($resource === false) {
+        if (false === $resource) {
             throw new \RuntimeException(strtr('Could not open the file at path %path%.', ['%path%' => $this->path]));
         }
 
