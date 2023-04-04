@@ -1382,12 +1382,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "387ebd563089080178a725257010dc62342ab4e6"
+                "reference": "aeddfab221275fc342537f45eb1ea05a28e40caa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/387ebd563089080178a725257010dc62342ab4e6",
-                "reference": "387ebd563089080178a725257010dc62342ab4e6",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/aeddfab221275fc342537f45eb1ea05a28e40caa",
+                "reference": "aeddfab221275fc342537f45eb1ea05a28e40caa",
                 "shasum": ""
             },
             "require": {
@@ -1437,7 +1437,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-04T07:41:37+00:00"
+            "time": "2023-04-04T09:02:16+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1445,12 +1445,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "153f70e3de73eb417080a6495bd837bc41e795c8"
+                "reference": "c9caa88330897fe7010bcff476fc6db5fb5afe8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/153f70e3de73eb417080a6495bd837bc41e795c8",
-                "reference": "153f70e3de73eb417080a6495bd837bc41e795c8",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c9caa88330897fe7010bcff476fc6db5fb5afe8d",
+                "reference": "c9caa88330897fe7010bcff476fc6db5fb5afe8d",
                 "shasum": ""
             },
             "require": {
@@ -1516,7 +1516,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-30T08:35:17+00:00"
+            "time": "2023-04-04T09:00:31+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1773,12 +1773,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "86f82343b0393f2847d665db3cbd6d0956c802e5"
+                "reference": "854fb4118a993413c0437b059795aaf95f1e00b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/86f82343b0393f2847d665db3cbd6d0956c802e5",
-                "reference": "86f82343b0393f2847d665db3cbd6d0956c802e5",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/854fb4118a993413c0437b059795aaf95f1e00b5",
+                "reference": "854fb4118a993413c0437b059795aaf95f1e00b5",
                 "shasum": ""
             },
             "require": {
@@ -1867,7 +1867,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-03T13:50:53+00:00"
+            "time": "2023-04-04T09:19:24+00:00"
         },
         {
             "name": "psr/cache",

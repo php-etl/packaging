@@ -19,7 +19,7 @@
         requireCoverageMetadata="false">
     <testsuites>
         <testsuite name="unit">
-            <directory>tests/unit</directory>
+            <directory>tests/unit/</directory>
         </testsuite>
     </testsuites>
     <coverage>
@@ -28,6 +28,6 @@
         </include>
     </coverage>
     <php>
-        <ini name="allow_url_include" value="1" />
+        <ini name="allow_url_include" value="1"/>
     </php>
 </phpunit>
