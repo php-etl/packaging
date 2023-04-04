@@ -20,7 +20,7 @@ final class TarArchive implements AssetInterface
     public function __construct(FileInterface|DirectoryInterface ...$files)
     {
         $resource = fopen('php://temp', 'rb+');
-        if ($resource === false) {
+        if (false === $resource) {
             throw new \RuntimeException('Could not create a temporary storage for the TAR archive creation.');
         }
         $this->stream = $resource;
@@ -61,11 +61,12 @@ final class TarArchive implements AssetInterface
     {
         $pathPrefix = null;
         $filename = $path;
-        if (strlen($path) > 255) {
+        if (\strlen($path) > 255) {
             throw new \RuntimeException('File path is too long, standard Tar with ustar format supports only 255 chars.');
-        } elseif (strlen($path) > 100) {
+        }
+        if (\strlen($path) > 100) {
             $index = strrpos($path, '/');
-            if ($index === false || $index > 155) {
+            if (false === $index || $index > 155) {
                 throw new \RuntimeException('File name is too long, standard Tar with ustar format supports only 155 chars.');
             }
 
@@ -76,7 +77,7 @@ final class TarArchive implements AssetInterface
         $header = pack(
             'Z100Z8Z8Z8a12a12Z8ccZ100Z6ccZ32Z32Z8Z8Z155Z12',
             $filename,
-            sprintf('%06o ', 0644),
+            sprintf('%06o ', 0o644),
             sprintf('%06o ', getmyuid()),
             sprintf('%06o ', getmygid()),
             sprintf('%011o ', $size),
@@ -96,10 +97,10 @@ final class TarArchive implements AssetInterface
             '',                                 // pad
         );
 
-        for ($i = 0, $checksum = 0; $i < 512; $i++) {
-            $checksum += ord($header[$i]);
+        for ($i = 0, $checksum = 0; $i < 512; ++$i) {
+            $checksum += \ord($header[$i]);
         }
-        $header = substr_replace($header, pack('a6', sprintf("%06o", $checksum)), 148, 7);
+        $header = substr_replace($header, pack('a6', sprintf('%06o', $checksum)), 148, 7);
 
         fwrite($this->stream, $header);
     }
@@ -107,12 +108,12 @@ final class TarArchive implements AssetInterface
     public function asResource()
     {
         $resource = fopen('php://temp', 'rb+', false);
-        fseek($this->stream, 0, SEEK_SET);
+        fseek($this->stream, 0, \SEEK_SET);
         stream_copy_to_stream($this->stream, $resource);
         fwrite($resource, pack('a1024', ''));
 
-        fseek($resource, 0, SEEK_SET);
-        fseek($this->stream, 0, SEEK_END);
+        fseek($resource, 0, \SEEK_SET);
+        fseek($this->stream, 0, \SEEK_END);
 
         return $resource;
     }

@@ -36,6 +36,7 @@ final class Directory implements DirectoryInterface
     {
         $child = clone $this;
         $child->iterator = $this->iterator->getChildren();
+
         return $child;
     }
 

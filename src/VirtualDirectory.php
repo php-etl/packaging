@@ -6,6 +6,7 @@ namespace Kiboko\Component\Packaging;
 
 use Kiboko\Contract\Packaging\DirectoryInterface;
 use Kiboko\Contract\Packaging\FileInterface;
+use ReturnTypeWillChange;
 
 final readonly class VirtualDirectory implements DirectoryInterface
 {
@@ -38,11 +39,13 @@ final readonly class VirtualDirectory implements DirectoryInterface
         return $this->current() instanceof DirectoryInterface;
     }
 
+    #[\ReturnTypeWillChange]
     public function getChildren()
     {
         return $this->current();
     }
 
+    #[\ReturnTypeWillChange]
     public function current()
     {
         return $this->children->current();
@@ -53,11 +56,13 @@ final readonly class VirtualDirectory implements DirectoryInterface
         $this->children->next();
     }
 
+    #[\ReturnTypeWillChange]
     public function key()
     {
         return $this->children->key();
     }
 
+    #[\ReturnTypeWillChange]
     public function valid()
     {
         return $this->children->valid();

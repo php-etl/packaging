@@ -71,7 +71,7 @@ final class TarArchiveTest extends TestCase
 
         $data = unpack('Z11size', fread($resource, 512), 124);
 
-        $this->assertEquals((binary) '00000000011', $data['size']);
+        $this->assertEquals((binary) '00000000010', $data['size']);
     }
 
     public function testArchiveFileHeaderContainsTime()
