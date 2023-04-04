@@ -17,12 +17,10 @@
     "require": {
         "php": "^8.2",
         "nikic/php-parser": "^4.10",
-        "php-etl/packaging-contracts": "^0.2@dev"
+        "php-etl/packaging-contracts": "^0.3.0"
     },
     "require-dev": {
-        "johnkary/phpunit-speedtrap": "*",
-        "mybuilder/phpunit-accelerator": "*",
-        "phpunit/php-invoker": "*",
+        "phpunit/php-invoker": "^4.0.0",
         "phpstan/phpstan": "^1.10",
         "friendsofphp/php-cs-fixer": "^3.0",
         "infection/infection": "^0.26.18",
@@ -50,8 +48,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "0.2.x-dev",
-            "dev-feature/qualityflow-improvments": "0.2.x-dev"
+            "dev-main": "0.3.x-dev"
         }
     }
 }
