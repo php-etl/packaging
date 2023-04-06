@@ -34,10 +34,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "unit\\Kiboko\\Component\\Packaging\\": "tests/unit/",
-            "functional\\Kiboko\\Component\\Packaging\\": "tests/functional/",
-            "integration\\Kiboko\\Component\\Packaging\\": "tests/integration/",
-            "performance\\Kiboko\\Component\\Packaging\\": "tests/performance/"
+            "unit\\Kiboko\\Component\\Packaging\\": "tests/unit/"
         }
     },
     "config": {
