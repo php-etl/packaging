@@ -18,7 +18,7 @@
     "require": {
         "php": "^8.2",
         "nikic/php-parser": "^4.10",
-        "php-etl/packaging-contracts": "0.3.0",
+        "php-etl/packaging-contracts": "0.3.*",
         "phpunit/phpunit": "^10.0"
     },
     "require-dev": {
