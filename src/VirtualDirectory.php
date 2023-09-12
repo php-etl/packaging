@@ -6,7 +6,6 @@ namespace Kiboko\Component\Packaging;
 
 use Kiboko\Contract\Packaging\DirectoryInterface;
 use Kiboko\Contract\Packaging\FileInterface;
-use ReturnTypeWillChange;
 
 final readonly class VirtualDirectory implements DirectoryInterface
 {

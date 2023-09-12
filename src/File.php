@@ -9,9 +9,7 @@ use Kiboko\Contract\Packaging\FileInterface;
 
 final readonly class File implements FileInterface
 {
-    public function __construct(private string $path, private AssetInterface $content)
-    {
-    }
+    public function __construct(private string $path, private AssetInterface $content) {}
 
     public function getPath(): string
     {

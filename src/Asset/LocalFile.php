@@ -8,8 +8,11 @@ use Kiboko\Contract\Packaging\AssetInterface;
 
 final readonly class LocalFile implements AssetInterface
 {
-    public function __construct(private string $path)
+    public function __construct(private string $path) {}
+
+    public function getPath(): string
     {
+        return $this->path;
     }
 
     /** @return resource */
