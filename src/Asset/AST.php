@@ -10,9 +10,7 @@ use PhpParser\PrettyPrinter;
 
 final readonly class AST implements AssetInterface
 {
-    public function __construct(private Node $node)
-    {
-    }
+    public function __construct(private Node $node) {}
 
     /** @return resource */
     public function asResource()
