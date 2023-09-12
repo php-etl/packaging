@@ -12,6 +12,11 @@ final readonly class LocalFile implements AssetInterface
     {
     }
 
+    public function getPath(): string
+    {
+        return $this->path;
+    }
+
     /** @return resource */
     public function asResource()
     {
