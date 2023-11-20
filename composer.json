@@ -17,14 +17,14 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.2",
-        "nikic/php-parser": "^4.10",
+        "nikic/php-parser": "^4.15",
         "php-etl/packaging-contracts": "0.3.*",
         "phpunit/phpunit": "^10.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^1.10",
-        "friendsofphp/php-cs-fixer": "^3.0",
-        "infection/infection": "^0.26.18",
+        "friendsofphp/php-cs-fixer": "^3.38",
+        "infection/infection": "^0.26",
         "rector/rector": "^0.15"
     },
     "autoload": {
