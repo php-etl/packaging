@@ -1,4 +1,4 @@
-name: Quality (PHPStan level 3)
+name: Quality (PHPStan level 8)
 on: push
 jobs:
   cs-fixer:
@@ -32,5 +32,5 @@ jobs:
           uses: php-actions/phpstan@v3
           with:
               path: src/
-              level: 3
+              level: 8
               php_version: '8.2'

@@ -17,12 +17,12 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.2",
-        "nikic/php-parser": "^4.15",
+        "nikic/php-parser": "^5.6",
         "php-etl/packaging-contracts": "0.3.*",
         "phpunit/phpunit": "^10.0"
     },
     "require-dev": {
-        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan": "^2.2",
         "friendsofphp/php-cs-fixer": "^3.38",
         "infection/infection": "^0.26",
         "rector/rector": "^0.15"
